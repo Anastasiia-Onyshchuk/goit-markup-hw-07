@@ -287,7 +287,7 @@ body {
 
 
 
-.cardset__button {
+.filter__button {
     display: inline-block;
     color: var(--secondary-text-color);
     background-color: #F5F4FA;
@@ -306,13 +306,13 @@ body {
     transition-timing-function: var(--time-distribution-function);
 }
 
-.cardset__button :first-child {
+.filter__button :first-child {
     display: inline-block;
     padding: 6px 25px;
 }
 
-.cardset__button:hover,
-.cardset__button:focus {
+.filter__button:hover,
+.filter__button:focus {
     color: #FFFFFF;
     background-color: var(--hover-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -960,12 +960,12 @@ margin-bottom: 20px;
 /* Portfolio */
 
 /* Filter */
-.filter {
+.portfolio-content{
     padding-top: 94px;
     padding-bottom: 94px;
 }
 
-.button-container {
+.filter{
     display: flex;
     margin-top: 0px;
     align-items: center;
@@ -973,41 +973,41 @@ margin-bottom: 20px;
     margin-bottom: 50px;
 }
 
-.button-container-item:not(:last-child) {
+.filter__item:not(:last-child) {
     margin-right: 8px;
 }
 
-.cards-container {
-    width: 1230px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 30px;
-}
-
-.portfolio-cards {
-
+.cardset{
     display: flex;
     flex-wrap: wrap;
     margin-left: 0;
 }
-
-
-
-.cards-text {
-    padding: 20px 24px;
-    border: 1px solid #EEEEEE;
+.cardset__element {
+    flex-basis: calc((100% - 60px)/3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+    transition: box-shadow 250ms var(--time-distribution-function);
 }
-
-.portfolio-cards-element:nth-last-child(-n+3) {
+.cardset__element:nth-last-child(-n+3) {
     margin-bottom: 0px;
 }
 
-.portfolio-cards-element:nth-child(3n) {
+.cardset__element:nth-child(3n) {
     margin-right: 0;
 }
-
-
-.portfolio-cards-element h3 {
+.cardset__element:hover,
+.cardset__element:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.cardset__thumb{
+    position: relative;
+    overflow: hidden;
+}
+.cardset__description{
+    padding: 20px 24px;
+    border: 1px solid #EEEEEE;
+}
+.cardset__title{
     margin-top: 0;
     margin-bottom: 4px;
     font-weight: 700;
@@ -1018,12 +1018,7 @@ margin-bottom: 20px;
     letter-spacing: 0.06em;
 }
 
-.portfolio-cards-element:hover,
-.position-cards-element:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.portfolio-images {
+.cardset__image{
 
     display: block;
     max-width: 100%;
@@ -1031,7 +1026,7 @@ margin-bottom: 20px;
     margin-top: 0;
 }
 
-.portfolio-text {
+.cardset__text {
     margin-top: 0;
     margin-bottom: 0;
     font-family: 'Roboto';
@@ -1040,19 +1035,7 @@ margin-bottom: 20px;
     letter-spacing: 0.03em;
 }
 
-.portfolio-cards-element {
-    flex-basis: calc((100% - 60px)/3);
-    margin-right: 30px;
-    margin-bottom: 30px;
-    transition: box-shadow 250ms var(--time-distribution-function);
-}
-
-.portfolio-cards-thumb {
-    position: relative;
-    overflow: hidden;
-}
-
-.portfolio-cards-description {
+.cadrset-hover{
     position: absolute;
     top: 0;
     left: 0;
@@ -1066,14 +1049,14 @@ margin-bottom: 20px;
     transition: transform 250ms var(--time-distribution-function);
 }
 
-.portfolio-cards-description p {
+.cadrset-hove__text{
     font-weight: 400;
     font-size: 18px;
     line-height: 1.55;
     letter-spacing: 0.03em;
 }
 
-.portfolio-cards-element:hover .portfolio-cards-description {
+.cardset__element:hover .cadrset-hover{
     transform: translateY(0);
     pointer-events: none;
 }
